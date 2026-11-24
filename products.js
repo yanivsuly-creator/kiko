@@ -13,9 +13,8 @@ window.KIKO = {
     {
       id: "coffee", title: "עולם הקפה", short: "קפה", wall: ["קפה"], band: ["עולם", "הקפה"],
       lead: "קפסולות אספרסו מור למכונות Nespresso",
-      hero: ["coffee_colombia", "coffee_gold"],
+      hero: ["coffee_colombia", "coffee_napoli"],
       groups: [
-        { id: "alu", title: "קפסולות אלומיניום" },
         { id: "classic", title: "סדרת החוזק" },
         { id: "drinks", title: "טעמים ומשקאות" },
         { id: "boxes", title: "מארזים גדולים" }
@@ -51,14 +50,6 @@ window.KIKO = {
     var gasU = ["החלפת בלון", "בלון חדש"];
     return [
       /* ---------- קפה ---------- */
-      { id: "c01", w: "coffee", g: "alu", name: "קפסולות Mor Gold", spec: "ערביקה ורובוסטה, קרמה קטיפתית", strength: 10, img: "coffee_gold", units: cap },
-      { id: "c02", w: "coffee", g: "alu", name: "קפסולות Forte", spec: "חזק במיוחד, קלייה איטית", strength: 11, img: "coffee_forte", units: cap },
-      { id: "c03", w: "coffee", g: "alu", name: "קפסולות Cremoso", spec: "גוף מלא, קלייה כהה", strength: 12, img: "coffee_cremoso", units: cap },
-      { id: "c04", w: "coffee", g: "alu", name: "קפסולות Classico", spec: "מעודן, גוף בינוני וסיומת חלקה", strength: 8, img: "coffee_classico", units: cap },
-      { id: "c05", w: "coffee", g: "alu", name: "קפסולות House Blend", spec: "מאוזן, ארומה עדינה", strength: 9, img: "coffee_house", units: cap },
-      { id: "c06", w: "coffee", g: "alu", name: "קפסולות קפה עם הל", spec: "אספרסו ים־תיכוני עם הל קלוי", strength: 8, img: "coffee_hel", units: cap },
-      { id: "c07", w: "coffee", g: "alu", name: "קפסולות Roaster's Choice", spec: "עמוק, גוף מודגש וסיומת ארוכה", strength: 11, img: "coffee_roasters", units: cap },
-      { id: "c08", w: "coffee", g: "alu", name: "קפסולות Terra Verde", spec: "מאוזן, לאספרסו קצר או ארוך", strength: 9, img: "coffee_terra_verde", units: cap },
 
       { id: "c11", w: "coffee", g: "classic", name: "קפסולות Crema", spec: "תערובת מעודנת וקטיפתית", strength: 6, img: "coffee_crema", units: cap },
       { id: "c12", w: "coffee", g: "classic", name: "קפסולות Aroma", spec: "לקפוצ׳ינו, הפוך ואספרסו", strength: 7, img: "coffee_aroma", units: cap },
@@ -84,10 +75,6 @@ window.KIKO = {
       { id: "c34", w: "coffee", g: "boxes", name: "מארז Costa Rica", spec: "טעם עמוק וארומה אקזוטית", strength: 8, img: "coffee_costarica", units: ["מארז 50", "מארז 100"] },
       { id: "c35", w: "coffee", g: "boxes", name: "מארז Ethiopia", spec: "חמיצות נמוכה וגוף חזק", strength: 7, img: "coffee_ethiopia", units: ["מארז 50", "מארז 100"] },
       { id: "c36", w: "coffee", g: "boxes", name: "מארז India", spec: "ארומה חזקה וטעם פירותי", strength: 6, img: "coffee_india", units: ["מארז 50", "מארז 100"] },
-      { id: "c37", w: "coffee", g: "boxes", name: "מארז Italia Intenso", spec: "קלייה איטלקית עוצמתית", strength: 10, img: "coffee_italia_intenso", units: ["מארז 50"] },
-      { id: "c38", w: "coffee", g: "boxes", name: "מארז Italia Pieno", spec: "מאוזן, קלייה איטלקית", strength: 8, img: "coffee_italia_piano", units: ["מארז 50"] },
-      { id: "c39", w: "coffee", g: "boxes", name: "מארז Italia Cappuccino", spec: "משקה חלבי", img: "coffee_italia_cap", units: ["מארז 50"] },
-      { id: "c40", w: "coffee", g: "boxes", name: "מארז Italia Chocolate", spec: "משקה קקאו חלבי", img: "coffee_italia_choco", units: ["מארז 50"] },
       { id: "c41", w: "coffee", g: "boxes", name: "קפסולות נטול קפאין", spec: "10 שרוולים של 10 קפסולות", img: "coffee_decaf", units: ["מארז 100"] },
 
       /* ---------- מתוקים ---------- */
@@ -126,8 +113,6 @@ window.KIKO = {
       { id: "d32", w: "soda", g: "flavors", name: "טעם משקה אנרגיה", spec: "עד 9 ליטר משקה", img: "soda_energy", units: six, sku: "1424271721" },
       { id: "d41", w: "soda", g: "brita", name: "קנקן Style Essential לבן", spec: "כולל מסנן MAXTRA PRO אחד", img: "soda_brita_white", units: ["יחידה"], sku: "1071258720" },
       { id: "d42", w: "soda", g: "brita", name: "קנקן Style Essential כחול סערה", spec: "כולל מסנן MAXTRA PRO אחד", img: "soda_brita_blue", units: ["יחידה"], sku: "1071259720" },
-      { id: "d43", w: "soda", g: "brita", name: "קנקן Style Essential חול ים", spec: "כולל 3 מסנני MAXTRA PRO", img: "soda_brita_sand", units: ["יחידה"], sku: "1071260720" },
-      { id: "d44", w: "soda", g: "brita", name: "קנקן Glass מזכוכית", spec: "כולל מסנן MAXTRA PRO אחד", img: "soda_brita_glass", units: ["יחידה"], sku: "1071261720" },
       { id: "d45", w: "soda", g: "brita", name: "מסנני MAXTRA PRO", spec: "Taste & Protect Expert, שלישייה", img: "soda_brita_filter2", units: ["חבילת 3 מסננים"], sku: "1071262720" }
     ];
   })()
