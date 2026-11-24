@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="he" dir="rtl" data-theme="pearl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>קיקו שיווק | קטלוג הזמנות</title>
+<meta name="description" content="קפה, מתוקים, סודה ו־BRITA לעסקים. בוחרים מוצרים וכמויות ושולחים הזמנה ליוסי בוואטסאפ.">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:type" content="website">
+<meta property="og:title" content="קיקו שיווק | קטלוג הזמנות">
+<meta property="og:description" content="בוחרים מוצרים וכמויות ושולחים הזמנה ליוסי בוואטסאפ.">
+<meta property="og:image" content="https://yanivsuly-creator.github.io/kiko-catalog/img/og.jpg">
+<meta property="og:locale" content="he_IL">
+<link rel="icon" href="img/icon.png">
+<link rel="apple-touch-icon" href="img/icon.png">
+<link rel="preload" href="fonts/heebo-hebrew-900-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="themes.css">
+</head>
+<body>
+<a class="skip" href="#coffee">דילוג למוצרים</a>
+
+<header class="top">
+  <a class="top__logo" href="#home" aria-label="קיקו שיווק, לראש הקטלוג"><img src="img/logo-dark.webp" alt="קיקו שיווק" width="640" height="201"></a>
+  <nav class="top__nav" aria-label="עולמות הקטלוג"></nav>
+  <div class="top__tools">
+    <label class="search"><span class="vh">חיפוש מוצר</span>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg>
+      <input id="q" type="search" placeholder="חיפוש מוצר" autocomplete="off" enterkeyhint="search"></label>
+  </div>
+</header>
+
+<main id="home">
+  <section class="doors" aria-label="בחירת עולם"></section>
+  <div class="intro">
+    <h1>כל מה שהעסק צריך, בהזמנה אחת</h1>
+    <ol class="steps"><li>בוחרים מוצרים</li><li>קובעים כמות</li><li>שולחים ליוסי בוואטסאפ</li></ol>
+  </div>
+  <p class="noresult" hidden>לא נמצאו מוצרים. אפשר לנסות מילה אחרת, או <button type="button" id="clearq">להציג את כל הקטלוג</button>.</p>
+  <div id="worlds"></div>
+</main>
+
+<footer class="foot">
+  <img src="img/logo-dark.webp" alt="קיקו שיווק" width="640" height="201" loading="lazy">
+  <p>דברו עם יוסי: <a href="tel:+972543512622" dir="ltr">054-3512622</a> · הזמנות גם בוואטסאפ</p>
+  <small>התמונות להמחשה בלבד. זמינות ומחיר יאושרו מול יוסי. שמות המותגים והסימנים המסחריים שייכים לבעליהם.</small>
+</footer>
+
+<div class="bar" hidden>
+  <button type="button" class="bar__btn" id="openOrder">
+    <span class="bar__count" aria-hidden="true">0</span>
+    <span class="bar__txt">ההזמנה שלי</span>
+    <span class="bar__go">לסיכום ושליחה</span>
+  </button>
+</div>
+
+<dialog class="order" aria-labelledby="orderT">
+  <div class="order__in">
+    <div class="order__head"><h2 id="orderT">ההזמנה שלי</h2><button type="button" class="x" data-close aria-label="סגירה"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+    <div class="order__scroll">
+      <div class="order__list"></div>
+      <div class="order__form">
+        <label>שם העסק<input name="biz" autocomplete="organization"></label>
+        <label>איש קשר<input name="who" autocomplete="name"></label>
+        <label class="wide">כתובת למשלוח<input name="addr" autocomplete="street-address"></label>
+        <label class="wide">הערות ליוסי<textarea name="note" rows="2"></textarea></label>
+      </div>
+      <button type="button" class="clear">ריקון ההזמנה</button>
+    </div>
+    <div class="order__foot">
+      <button type="button" class="send"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3.5A12.4 12.4 0 0 0 5.4 22.3L3.6 28.5l6.4-1.7A12.4 12.4 0 1 0 16 3.5Z" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linejoin="round"/><path d="M11.6 9.6c.5 0 .9.1 1.1.7l.9 2.1c.1.4 0 .7-.2 1l-.8 1c-.2.2-.2.5 0 .8a8.6 8.6 0 0 0 4.2 3.7c.4.2.7.1.9-.1l1-1.2c.3-.4.6-.4 1-.2l2.1 1c.5.3.7.5.7.9 0 1.7-1.6 3-3.2 3-3.400 0-9.800-4.200-10.100-9.600 0-1.600 1-3.100 2.400-3.100Z" fill="currentColor"/></svg><span>שליחת ההזמנה ליוסי</span></button>
+      <button type="button" class="copy">העתקת ההזמנה</button>
+    </div>
+  </div>
+</dialog>
+<div class="toast" role="status" aria-live="polite"></div>
+<noscript><p style="padding:24px;text-align:center">להזמנה: יוסי, 054-3512622</p></noscript>
+
+<script src="products.js"></script>
+<script src="relief.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

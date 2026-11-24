@@ -1,0 +1,75 @@
+/* ערכות נושא בהירות: stone (אבן חצובה), enamel (אמייל צבעוני), pearl (פנינה ומתכת) */
+
+/* --- אבן חצובה --- */
+html[data-theme=stone]{--page:#f3ece2;--bar:#fffaf3;--txt:#2f1c10;--muted:#6d5138}
+[data-theme=stone] [data-world=coffee]{--wall:#efe4d4;--deep:#e5d6c0;--plate:#fdf8f0;--plate2:#f1e6d7;--edge:#c9a57a;--lit:#8a5127;--niche:#eadbc5;--niche2:#d3bb98;--soft:#684b32;--ink:#2f1c10;--onlit:#fff}
+[data-theme=stone] [data-world=sweets]{--wall:#f7e4e6;--deep:#f0d2d7;--plate:#fff8f8;--plate2:#f9e6e8;--edge:#d9919f;--lit:#b02352;--niche:#f4d5da;--niche2:#e2adb8;--soft:#7a3a4d;--ink:#43101f;--onlit:#fff}
+[data-theme=stone] [data-world=soda]{--wall:#dff0f1;--deep:#c9e4e7;--plate:#f8fdfd;--plate2:#e4f3f4;--edge:#7dbcc3;--lit:#0b7480;--niche:#d0e9eb;--niche2:#a5d0d5;--soft:#2c5d65;--ink:#06333a;--onlit:#fff}
+
+/* --- אמייל צבעוני --- */
+html[data-theme=enamel]{--page:#fff7ee;--bar:#ffffff;--txt:#3a1c06;--muted:#6b4526}
+[data-theme=enamel] [data-world=coffee]{--wall:#f6bd74;--deep:#eda954;--plate:#fffdf9;--plate2:#fff1dd;--edge:#e7a04a;--lit:#7a3f12;--niche:#ffe3b8;--niche2:#f4bd74;--soft:#6f431d;--ink:#3a1c06;--onlit:#fff}
+[data-theme=enamel] [data-world=sweets]{--wall:#ff99ad;--deep:#fb7f98;--plate:#fffafb;--plate2:#ffe9ed;--edge:#f2708c;--lit:#b80f45;--niche:#ffd3dc;--niche2:#ff9fb3;--soft:#7f2442;--ink:#4a0620;--onlit:#fff}
+[data-theme=enamel] [data-world=soda]{--wall:#7ad7df;--deep:#56c7d1;--plate:#fafeff;--plate2:#e0f8fa;--edge:#34b1bd;--lit:#046a77;--niche:#c4f0f4;--niche2:#7fd6de;--soft:#13565f;--ink:#03323a;--onlit:#fff}
+
+/* --- פנינה ומתכת --- */
+html[data-theme=pearl]{--page:#f8f6f4;--bar:#ffffff;--txt:#2a2420;--muted:#5f554d}
+[data-theme=pearl] [data-world=coffee]{--wall:#faf5ef;--deep:#f3eae0;--plate:#ffffff;--plate2:#f8f1ea;--edge:#c98a5c;--lit:#a05a2a;--lit2:#e2aa7c;--niche:#f6e6d8;--niche2:#e0bd9f;--soft:#6b5140;--ink:#2f2018;--onlit:#fff}
+[data-theme=pearl] [data-world=sweets]{--wall:#fcf3f4;--deep:#f7e6e9;--plate:#ffffff;--plate2:#fbf0f2;--edge:#d38a99;--lit:#ab4660;--lit2:#e9a6b4;--niche:#f9e1e6;--niche2:#e6b3be;--soft:#76465a;--ink:#3b1822;--onlit:#fff}
+[data-theme=pearl] [data-world=soda]{--wall:#f1f8f9;--deep:#e2f0f2;--plate:#ffffff;--plate2:#eef7f8;--edge:#6cb0b9;--lit:#1f727e;--lit2:#83c5cd;--niche:#dcf0f2;--niche2:#a6d0d6;--soft:#39616a;--ink:#0f343b;--onlit:#fff}
+
+/* --- משותף לכל הערכות הבהירות --- */
+html[data-theme]:not([data-theme=dark]){
+  & body{background:var(--page);color:var(--txt)}
+  & :focus-visible{outline-color:#1b1b1b}
+  & .top{background:var(--bar);border-bottom:1px solid #0000001a;box-shadow:0 6px 20px #00000017}
+  & .top__nav a{color:var(--txt)}
+  & .top__nav a:hover{background:#0000000d}
+  & .top__nav a.on{color:var(--onlit)}
+  & .search{background:#0000000d;box-shadow:inset 0 2px 4px #0000002e,0 1px 0 #fff}
+  & .search:focus-within{box-shadow:inset 0 2px 4px #0000002e,0 0 0 2px var(--txt)}
+  & .search svg{stroke:var(--muted)}
+  & .search input::placeholder{color:var(--muted)}
+  & .door+.door{box-shadow:inset -1px 0 0 #fff9,inset -12px 0 24px -14px #0005}
+  & .door::after{background:linear-gradient(transparent,color-mix(in srgb,var(--deep) 45%,transparent) 50%,var(--deep) 92%)}
+  & .door__items img{filter:drop-shadow(0 20px 16px #0000004d) drop-shadow(0 3px 4px #00000040)}
+  & .door__cta>span:first-child{font-weight:500}
+  & .btn,& .add{background:linear-gradient(color-mix(in srgb,var(--lit) 80%,#fff),var(--lit) 60%,color-mix(in srgb,var(--lit) 88%,#000));box-shadow:inset 0 1px 0 #ffffff80,inset 0 -2px 4px #0003,0 3px 0 color-mix(in srgb,var(--lit) 70%,#000),0 8px 16px #00000038}
+  & .add:active{box-shadow:inset 0 2px 5px #0006}
+  & .intro{background:var(--bar);border-block:1px solid #00000014}
+  & .steps{color:var(--muted)}
+  & .steps li::before{color:#fff;background:#a0561f;box-shadow:inset 0 1px 0 #fff8,0 2px 4px #0003}
+  & .world{background:linear-gradient(var(--deep) 400px,var(--wall) 760px,var(--wall) 80%,var(--deep))}
+  & .band{box-shadow:none}
+  & .chips a{background:linear-gradient(var(--plate),var(--plate2));box-shadow:inset 0 1px 0 #fff,inset 0 -2px 3px #0000000f,0 0 0 1px color-mix(in srgb,var(--edge) 55%,transparent),0 4px 10px #00000026}
+  & .lead{color:var(--ink)}
+  & .group h3{color:var(--ink);text-shadow:0 1px 0 #ffffffb0}
+  & .card{background:linear-gradient(160deg,#fff,var(--plate) 30%,var(--plate2));box-shadow:inset 0 2px 0 #fff,inset 0 -3px 5px color-mix(in srgb,var(--edge) 26%,transparent),0 0 0 1px color-mix(in srgb,var(--edge) 40%,transparent),0 2px 0 color-mix(in srgb,var(--edge) 55%,transparent),0 18px 30px -10px color-mix(in srgb,var(--ink) 45%,transparent)}
+  & .card.in{box-shadow:inset 0 2px 0 #fff,0 0 0 3px var(--lit),0 18px 30px -10px color-mix(in srgb,var(--ink) 45%,transparent)}
+  & .niche{background:radial-gradient(90% 60% at 50% 34%,#ffffffd9,transparent 72%),linear-gradient(var(--niche) 0 76%,var(--niche2) 76.4%,color-mix(in srgb,var(--niche2) 55%,var(--niche)) 100%);box-shadow:inset 0 12px 18px -8px color-mix(in srgb,var(--ink) 55%,transparent),inset 9px 0 14px -10px color-mix(in srgb,var(--ink) 45%,transparent),inset -9px 0 14px -10px color-mix(in srgb,var(--ink) 35%,transparent),0 2px 0 #fff}
+  & .tag{background:linear-gradient(color-mix(in srgb,var(--lit) 82%,#fff),var(--lit));box-shadow:inset 0 1px 0 #ffffff80,0 3px 6px #0004}
+  & .units,& .qty{background:color-mix(in srgb,var(--niche) 75%,#fff);box-shadow:inset 0 2px 5px color-mix(in srgb,var(--ink) 32%,transparent),0 1px 0 #fff}
+  & .units button[aria-pressed=true]{background:linear-gradient(#fff,var(--plate2));box-shadow:inset 0 1px 0 #fff,0 0 0 1px color-mix(in srgb,var(--edge) 50%,transparent),0 2px 5px #0003}
+  & .qty button{background:linear-gradient(color-mix(in srgb,var(--lit) 80%,#fff),var(--lit));box-shadow:inset 0 1px 0 #ffffff80,0 2px 4px #0004}
+  & .foot{background:var(--bar);border-top:1px solid #00000014}
+  & .foot a{color:#8a4a18}& .foot small{color:var(--muted)}
+  & .bar{background:linear-gradient(transparent,#ffffffd9)}
+  & .order{color:var(--txt);background:var(--page);box-shadow:30px 0 80px #0006}
+  & .order::backdrop{background:#1a100b80}
+  & .order__head{border-bottom:1px solid #0000001a}
+  & .x{background:#0000000d;box-shadow:inset 0 2px 4px #0000002b,0 1px 0 #fff}& .x svg{stroke:var(--txt)}
+  & .line{color:var(--ink);background:linear-gradient(#fff,var(--plate2));box-shadow:inset 0 1px 0 #fff,0 0 0 1px color-mix(in srgb,var(--edge) 40%,transparent),0 4px 10px #0000001f}
+  & .line__img{box-shadow:inset 0 3px 6px #0003}
+  & .order__form input,& .order__form textarea{background:#fff;box-shadow:inset 0 2px 5px #0000002e,0 0 0 1px #0000001f}
+  & .empty,& .clear,& .copy{color:var(--muted)}
+  & .order__foot{background:var(--bar);border-top:1px solid #0000001a}
+  & .toast{background:#1d120b;color:#fff}
+}
+[data-theme=pearl] .btn,[data-theme=pearl] .add,[data-theme=pearl] .qty button,[data-theme=pearl] .tag{background:linear-gradient(170deg,color-mix(in srgb,var(--lit) 88%,#000),var(--lit) 45%,color-mix(in srgb,var(--lit) 86%,#fff) 52%,var(--lit) 60%,color-mix(in srgb,var(--lit) 84%,#000))!important}
+[data-theme=pearl] .card{border-top:3px solid var(--lit2)}
+[data-theme=enamel] .steps li::before{background:#046a77!important}
+@media (max-width:820px){
+  html[data-theme]:not([data-theme=dark]) .top__nav a:not(.on){background:#0000000d}
+  html[data-theme]:not([data-theme=dark]) .door+.door{box-shadow:inset 0 1px 0 #fff9,inset 0 14px 22px -16px #0006}
+  html[data-theme]:not([data-theme=dark]) .door::after{background:linear-gradient(270deg,transparent,color-mix(in srgb,var(--deep) 60%,transparent))}
+}
